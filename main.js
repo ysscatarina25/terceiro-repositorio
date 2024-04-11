@@ -16,8 +16,14 @@ for (let i=0; i<botoes.length; i++) {
 }
 
 const contadores = document.querySelectorAll(".contador");
+const tempoObjetivol = new Date("2024-04-30T23:59:59");
 const tempoObjetivol = new Date("2024-05-10T23:59:59");
+const tempoObjetivol = new Date("2024-06-15T23:59:59");
+const tempoObjetivol = new Date("2024-12-13T23:59:59");
 let tempoAtual = new Date();
+
+const tempos = [tempoObjetivo, tempoObjetivol2, tempoObjetivol3, tempoObjetivol4];
+
 
 contadores[0].textContent = tempoObjetivo1 - tempoAtual;
 
