@@ -36,12 +36,26 @@ function calculaTempo(tempoObjetivo){
     let horas = Math.floor(minutos/60);
     let dias = Math.floor(horas/24);
 
-    segundos %=60;
-    minutos %=60;
-    horas %=24;
+    segundos %= 60;
+    minutos %= 60;
+    horas %= 24;
 
-    return dias + "dias" + horas + "horas" + minutos + "munitos" + segundos + "segundos";
+    if (tempoFinal > 0 ) 
+    {return dias + "dias" + horas + "horas" + minutos + "munitos" + segundos + "segundos";
+} else {
+    return "prazo finalizado";
 }
 
-tempoObjetivo1 - tempoAtual
-
+    
+ 
+function atualizaCronometro() {
+    for( let i = 0; i < contadores.length; i++) {
+        contadores[i].textContent = calculaTempo(tempos[i]);
+     }
+    
+}
+ function comecaCronometro(){
+    atualizaCronometro();
+    setInterval(atualizaCronometro(), 1000);
+ }
+comecaCronometro()
